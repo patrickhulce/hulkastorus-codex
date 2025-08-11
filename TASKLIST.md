@@ -10,7 +10,7 @@
     - [x] Implement basic e2e test harness with playwright
     - [x] Add GitHub Actions workflow for CI/CD
     - [x] Implement homepage
-    - [ ] Implement app shell UI layout (dummy content for now)
+    - [x] Implement app shell UI layout (dummy content for now)
 - [ ] User Functionality (Basic)
     - [ ] Create Neon database
     - [ ] Add Prisma configuration with a basic user model
