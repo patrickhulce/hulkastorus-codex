@@ -14,7 +14,7 @@
 - [ ] User Functionality (Basic)
     - [x] Create Neon database
     - [x] Add Prisma configuration with a basic user model
-    - [ ] Implement barebones user creation/deletion API routes (unprotected, no validation, no email verification)
+    - [x] Implement barebones user creation/deletion API routes (unprotected, no validation, no email verification)
     - [ ] Implement /register, /login, /logout pages
     - [ ] Add NextAuth configuration and protect existing pages/routes
 - [ ] Core Functionality (Basic)
