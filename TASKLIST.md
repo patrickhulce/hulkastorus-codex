@@ -1,0 +1,46 @@
+- Boilerplate
+    - Create a new GitHub repository for the project
+    - Initialize a new NextJS project with Shadcn/UI and Tailwind CSS
+    - Initialize Tailwind CSS theme with brand colors
+    - Add typescript configuration
+    - Add eslint and prettier configuration
+    - Add jest configuration
+    - Add placeholder pages for all pages in the app
+    - Implement API-level test suite harness
+    - Implement basic e2e test harness with playwright
+    - Add GitHub Actions workflow for CI/CD
+    - Implement homepage
+    - Implement app shell UI layout (dummy content for now)
+- User Functionality (Basic)
+    - Create Neon database
+    - Add Prisma configuration with a basic user model
+    - Implement barebones user creation/deletion API routes (unprotected, no validation, no email verification)
+    - Implement /register, /login, /logout pages
+    - Add NextAuth configuration and protect existing pages/routes
+- Core Functionality (Basic)
+    - Create mock R2 server for testing
+    - Create R2 bucket
+    - Implement file upload, download API routes + public download route
+    - Implement file upload UI on dashboard
+    - Implement remainder of file+directory management routes
+    - Implement file+directory list and navigation UI on file manager
+    - Implement file+directory deletion and rename UI on file manager
+- Core Functionality (Advanced)
+    - Implement expiry sweep cron job
+    - Implement file+directory permissions UI on file manager
+    - Implement file+directory expiration UI on file manager
+    - Implement file search UI on file manager
+- User Functionality (Advanced)
+    - Implement rest of user management API routes
+    - Implement API key routes
+    - Implement /app/settings page
+    - Implement user forgot password flow
+    - Implement user email verification flow
+- Additional Functionality
+    - Implement user usage data API route
+    - Implement user usage data UI on dashboard
+    - Implement user recent files on dashboard
+- Polish
+    - Implement documentation page
+    - Implement orphan file cleanup cron job
+    - Implement Vercel-based rate limiting
