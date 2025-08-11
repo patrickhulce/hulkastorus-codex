@@ -12,8 +12,8 @@
     - [x] Implement homepage
     - [x] Implement app shell UI layout (dummy content for now)
 - [ ] User Functionality (Basic)
-    - [ ] Create Neon database
-    - [ ] Add Prisma configuration with a basic user model
+    - [x] Create Neon database
+    - [x] Add Prisma configuration with a basic user model
     - [ ] Implement barebones user creation/deletion API routes (unprotected, no validation, no email verification)
     - [ ] Implement /register, /login, /logout pages
     - [ ] Add NextAuth configuration and protect existing pages/routes
