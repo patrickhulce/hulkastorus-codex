@@ -17,6 +17,7 @@
     "db:push": "prisma db push"
   },
   "dependencies": {
+    "@prisma/client": "^5.20.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.539.0",
