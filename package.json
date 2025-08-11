@@ -47,6 +47,7 @@
     "jest-environment-jsdom": "^30.0.5",
     "next-test-api-route-handler": "^5.0.0",
     "prettier": "^3.6.2",
+    "prisma": "^5.20.0",
     "tailwindcss": "^4",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
