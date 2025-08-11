@@ -137,6 +137,24 @@ When multiple valid approaches exist, choose based on:
 - Use existing test utilities/helpers
 - Tests should be deterministic
 
+## Project Commands
+
+The common commands for a project should be defined in the project.json (typescript) or Makefile (python) in a hierarchical organization.
+
+Some common examples are found below:
+
+- `run` - runs the entire project
+- `run:server` - runs just the server component
+- `test` - runs all the most common tests for a project, typecheckers, linters, formatters, and unit frameworks.
+- `test:lint` - runs just the linters
+- `test:lint:fix` - runs the linters in fix mode
+- `test:unit` - runs the unit tests
+- `test:format` - runs code formatters like prettier and ruff
+- `test:typecheck` - runs typecheckers
+- `build` - builds the entire project for production
+- `build:ui` - builds just the UI portion of the project for production
+- `build:ui:debug` - builds just the UI portion of the project with debug symbols
+
 ## Important Reminders
 
 **NEVER**:
