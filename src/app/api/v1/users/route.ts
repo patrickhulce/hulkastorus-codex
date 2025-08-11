@@ -1,14 +1,16 @@
 import {NextResponse} from "next/server";
 import {getPrisma} from "@/lib/prisma";
+import {hashPassword} from "@/lib/passwords";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const prisma = await getPrisma();
+    const hashed = await hashPassword(body.password);
     const user = await prisma.user.create({
       data: {
         email: body.email,
-        password: body.password,
+        password: hashed,
         firstName: body.firstName ?? null,
         lastName: body.lastName ?? null,
         inviteCode: body.inviteCode ?? null,
@@ -22,4 +24,3 @@ export async function POST(request: Request) {
     return NextResponse.json({error: message}, {status: 500});
   }
 }
-
