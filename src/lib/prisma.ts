@@ -1,12 +1,28 @@
 // Lightweight Prisma client accessor that avoids hard import errors during typecheck
 // in environments where @prisma/client is not installed.
-export async function getPrisma(): Promise<any> {
-  // @ts-ignore - optional at typecheck time; resolved at runtime in real envs
-  const {PrismaClient} = await import("@prisma/client");
-  const g = globalThis as any;
-  if (!g.__prisma) {
-    g.__prisma = new PrismaClient();
-  }
-  return g.__prisma;
+export type PrismaLike = {
+  user: {
+    create: (args: Record<string, unknown>) => Promise<Record<string, unknown>>;
+    delete: (args: Record<string, unknown>) => Promise<unknown>;
+  };
+};
+
+declare global {
+  var __prisma: PrismaLike | undefined;
 }
 
+export async function getPrisma(): Promise<PrismaLike> {
+  if (globalThis.__prisma) return globalThis.__prisma;
+
+  let PrismaClientCtor: {new (): PrismaLike};
+  try {
+    PrismaClientCtor = (await import("@prisma/client")).PrismaClient as unknown as {
+      new (): PrismaLike;
+    };
+  } catch {
+    throw new Error("Prisma client not available at runtime. Ensure @prisma/client is installed.");
+  }
+
+  globalThis.__prisma = new PrismaClientCtor();
+  return globalThis.__prisma;
+}

@@ -19,4 +19,3 @@ test("registers a new user via form", async ({page}) => {
 
   await expect(page.getByText(/Account created\. You can now log in\./i)).toBeVisible();
 });
-

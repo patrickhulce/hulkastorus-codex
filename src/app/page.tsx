@@ -34,13 +34,17 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 py-20 sm:grid-cols-2" data-testid="hero">
+      <section
+        className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-4 py-20 sm:grid-cols-2"
+        data-testid="hero"
+      >
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl" data-testid="headline">
             Dev-Friendly Cloud Storage, Hulk-Strong.
           </h1>
           <p className="mt-4 max-w-prose text-neutral-300" data-testid="tagline">
-            Instant public URLs and frictionless curl uploads — without SDKs, buckets, or OAuth pain.
+            Instant public URLs and frictionless curl uploads — without SDKs, buckets, or OAuth
+            pain.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -49,7 +53,10 @@ export default function Home() {
             >
               Request Invite
             </a>
-            <a className="rounded-md border border-neutral-800 px-4 py-2 hover:border-neutral-700" href="/docs">
+            <a
+              className="rounded-md border border-neutral-800 px-4 py-2 hover:border-neutral-700"
+              href="/docs"
+            >
               Read the Docs
             </a>
           </div>
@@ -57,7 +64,7 @@ export default function Home() {
         <div className="rounded-lg border border-neutral-800 bg-neutral-900 p-4">
           <pre className="overflow-x-auto text-sm leading-relaxed">
             <code>
-{`# Upload a file with curl
+              {`# Upload a file with curl
 curl -X POST https://api.hulkastor.us/api/v1/files \
   -H "Authorization: Bearer $HULK_API_KEY" \
   -H "Content-Type: application/json" \
@@ -92,7 +99,10 @@ https://hulk.st/or/us/abc123`}
       </section>
 
       {/* Logo carousel (placeholder) */}
-      <section className="mx-auto max-w-6xl px-4 py-8 text-center text-neutral-500" aria-label="Customers">
+      <section
+        className="mx-auto max-w-6xl px-4 py-8 text-center text-neutral-500"
+        aria-label="Customers"
+      >
         Hooli • Pied Piper • Enron • Theranos • Massive Dynamic
       </section>
 

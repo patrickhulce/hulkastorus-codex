@@ -7,4 +7,3 @@ export async function GET(request: Request) {
   res.cookies.set({name: "session", value: "", expires: new Date(0)});
   return res;
 }
-

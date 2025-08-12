@@ -9,4 +9,3 @@ describe("password hashing", () => {
     await expect(verifyPassword("wrong", hashed)).resolves.toBe(false);
   });
 });
-

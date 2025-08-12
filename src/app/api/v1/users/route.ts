@@ -17,10 +17,11 @@ export async function POST(request: Request) {
       },
     });
 
-    const {password, ...safe} = user;
-    return NextResponse.json(safe, {status: 201});
-  } catch (err: any) {
-    const message = typeof err?.message === "string" ? err.message : "Unknown error";
+    const safe = {...(user as Record<string, unknown>)} as Record<string, unknown>;
+    delete (safe as Record<string, unknown>)["password"];
+    return NextResponse.json(safe as unknown, {status: 201});
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : "Unknown error";
     return NextResponse.json({error: message}, {status: 500});
   }
 }

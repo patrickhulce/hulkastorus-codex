@@ -1,8 +1,8 @@
 interface BrowsePageProps {
-  params: { path?: string[] };
+  params: {path?: string[]};
 }
 
-export default function BrowsePage({ params }: BrowsePageProps) {
+export default function BrowsePage({params}: BrowsePageProps) {
   const currentPath = (params.path || []).join("/") || "/";
   return (
     <main className="p-8">
@@ -11,4 +11,3 @@ export default function BrowsePage({ params }: BrowsePageProps) {
     </main>
   );
 }
-

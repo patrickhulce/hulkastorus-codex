@@ -9,9 +9,7 @@ const navItems = [
   {href: "/app/settings", label: "Settings"},
 ];
 
-export default function AppLayout({
-  children,
-}: Readonly<{children: React.ReactNode}>) {
+export default function AppLayout({children}: Readonly<{children: React.ReactNode}>) {
   const pathname = usePathname();
 
   return (
@@ -53,4 +51,3 @@ export default function AppLayout({
     </div>
   );
 }
-

@@ -17,4 +17,3 @@ describe("App Shell Layout", () => {
     expect(screen.getByTestId("child")).toHaveTextContent("Hello");
   });
 });
-

@@ -31,8 +31,9 @@ export default function RegisterPage() {
       });
       if (!res.ok) throw new Error((await res.json()).error || res.statusText);
       setMessage("Account created. You can now log in.");
-    } catch (err: any) {
-      setMessage(`Failed to register: ${err?.message || "unknown error"}`);
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "unknown error";
+      setMessage(`Failed to register: ${msg}`);
     } finally {
       setSubmitting(false);
     }
