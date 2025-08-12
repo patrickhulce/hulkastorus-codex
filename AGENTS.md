@@ -167,7 +167,7 @@ Some common examples are found below:
 - Disable tests instead of fixing them
 - Commit code that doesn't compile
 - Make assumptions - verify with existing code
-- Use `git commit -m` for long descriptions, just include the subject
+- Use `git commit -m` for long descriptions, just include the one-liner
 
 **ALWAYS**:
 

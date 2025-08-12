@@ -16,9 +16,10 @@ export async function getPrisma(): Promise<PrismaLike> {
 
   let PrismaClientCtor: {new (): PrismaLike};
   try {
-    PrismaClientCtor = (await import("@prisma/client")).PrismaClient as unknown as {
-      new (): PrismaLike;
+    const mod = (await Function("m", "return import(m)")("@prisma/client")) as unknown as {
+      PrismaClient: {new (): PrismaLike};
     };
+    PrismaClientCtor = mod.PrismaClient;
   } catch {
     throw new Error("Prisma client not available at runtime. Ensure @prisma/client is installed.");
   }

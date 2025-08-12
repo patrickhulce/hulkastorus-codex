@@ -7,7 +7,8 @@ test("has title", async ({page}) => {
 
 test("shows hero headline and CTAs", async ({page}) => {
   await page.goto("/");
-  await expect(page.getByTestId("headline")).toContainText(/Dev-Friendly Cloud Storage/i);
-  await expect(page.getByRole("link", {name: /Request Invite/i})).toBeVisible();
-  await expect(page.getByRole("link", {name: /Read the Docs/i})).toBeVisible();
+  const hero = page.getByTestId("hero");
+  await expect(hero.getByTestId("headline")).toContainText(/Dev-Friendly Cloud Storage/i);
+  await expect(hero.getByRole("link", {name: /Request Invite/i})).toBeVisible();
+  await expect(hero.getByRole("link", {name: /Read the Docs/i})).toBeVisible();
 });
